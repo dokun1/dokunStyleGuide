@@ -80,7 +80,7 @@ Observe the following method:
     if (callSuccessful) {
         successBlock(@[@"testing"]);
     } else {
-        NSError *error = [NSError errorWithDomain:@"co.uk.IDscan" code:404 userInfo:@{}];
+        NSError *error = [NSError errorWithDomain:@"com.okun.io" code:404 userInfo:@{}];
         failureBlock(error);
     } 
 }

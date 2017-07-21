@@ -58,7 +58,7 @@ NSArray *arrayTwo = @[@"This is a really long string value",
 * If the elements of either set are individually longer than one word or 'thing', I hit return after every element so that the @ symbols line up.
 * Note the use of [literal notation](#literal-notation), which is covered later.
 
-##Conditional Code
+## Conditional Code
 
 * While [ternary operators](https://agilewarrior.wordpress.com/2012/09/21/objective-c-ternary-operator/) generally make things simpler and reduce the amount of code written, I avoid using them in code in lieu of properly spaced if-else statements, like so:
 
@@ -97,11 +97,11 @@ Observe the following method:
 }];
 ```
 
-##Documentation
+## Documentation
 
 * I automatically generate iOS documentation using [headerdoc2html](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/HeaderDoc/usage/usage.html), so I like to document my code in the following ways:
 
-###Properties:
+### Properties:
 
 ```obj-c
 /*!
@@ -112,7 +112,7 @@ Observe the following method:
 @property (strong, nonatomic) NSString *property;
 ```
 
-###NS_ENUM
+### NS_ENUM
 
 ```obj-c
 /*!
@@ -135,7 +135,7 @@ typedef NS_ENUM(NSInteger, DMOQuality){
 };
 ```
 
-###Methods
+### Methods
 
 ```obj-c
 /*!
@@ -148,7 +148,7 @@ typedef NS_ENUM(NSInteger, DMOQuality){
 - (void)device:(DMODevice *)device didFailWithError:(NSError *)error;
 ```
 
-###Interfaces
+### Interfaces
 
 ```obj-c
 /*!
@@ -157,7 +157,7 @@ typedef NS_ENUM(NSInteger, DMOQuality){
 @interface DMOController : UIViewController
 ```
 
-##Constants
+## Constants
 
 * I think it is very important to ensure that there are very rarely, if ever, literal strings embedded in my implementation code.
 * Defining a constant for a string or numeric value should look like so, between my import statements and interface/implementation:
@@ -176,7 +176,7 @@ extern CGFloat const kConstantFloatValue;
 
 * Note that all constants should start with a k, as is Apple's standard for constant naming. After that, if the constant is to be made public, I follow project namespace conventions for the beginning of the constant name if needed.
 
-##Literal Notation
+## Literal Notation
 
 * Objective-C 2.0 invoked literal notation, ridding me of this...:
 
@@ -198,7 +198,7 @@ extern CGFloat const kConstantFloatValue;
 
 * I use the second convention whenever possible!
 
-##Core Graphics
+## Core Graphics
 
 * When using CGRect, there is a specific set of functions for determining data points about the rectangle. Instead of doing this:
 
@@ -224,6 +224,6 @@ CGFloat height = CGRectGetHeight(frame);
 
 You can view the documentation for all of these methods [here](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CGGeometry/index.html).
 
-##Other
+## Other
 
 * Please email me at david@okun.io if you have other points you would like to add to this style guide.
